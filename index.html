@@ -1,0 +1,67 @@
+<html ng-app="calorieApp">
+    <head>
+        <title>Calorie Tracker</title>
+        <link rel="stylesheet" href="index.css"/> 
+        <script src="p1.js"></script>
+    <body ng-controller="calorieController">
+        <div class="main1">
+            <div class="logo-name">
+                <img src="Images/logo.png" />
+                <div class="name"><h1>Calorie Tracker</h1></div>
+            </div>
+            <div class="tracker">
+                <h1>{{totalCalorie}}/1500</h1>
+            </div>
+        </div>
+        <div class="main2">
+            <div class="inputTaker">
+                <h3>Food: </h3>
+                <input type="text" ng-model="item" placeholder="Enter the food name"/>
+                <h3>Calories: </h3>
+                <input type="number" ng-model="calories" placeholder="Enter the total calorie"/>
+                <br/>
+                <br/>
+                <button type="button" class="btn btn-outline-success" ng-click="addFood()">TRACK FOOD</button>
+            </div>
+            <div class="displayer">
+                <h2 id="tableHead">Tracked Food</h2>
+                <table>
+                    <tbody>
+                        <tr ng-repeat="item in items">
+                            <td>{{item.food}} -> {{item.calories}} Kcal</td>
+                            <td><button type="button" class="removeBtn" ng-click="removeItem($index)">REMOVE</button></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div>
+                <h2 id="quote">“One should eat to live, not live to eat.” — Benjamin Franklin</h2>
+            </div>
+        </div>
+        <div class="warning">
+            <p ng-show="totalCalorie>1500" id="limit">YOU HAVE CROSSED YOUR CONSUMPTION LIMIT!!</p>
+        </div>
+        <script>
+            var app=angular.module('calorieApp',[]);
+            app.controller('calorieController',function($scope){
+                $scope.items=[];
+                $scope.totalCalorie=0;
+                $scope.addFood=function(){
+                    if($scope.item && $scope.calories){
+                        $scope.items.push({food:$scope.item,calories:$scope.calories});
+                        $scope.totalCalorie=$scope.totalCalorie+$scope.calories;
+                    }
+                    $scope.item='';
+                    $scope.calories='';
+                };
+                $scope.removeItem=function(index){
+                    var item=$scope.items[index];
+                    var calorie=item.calories;
+                    $scope.totalCalorie=$scope.totalCalorie-calorie;
+                    $scope.items.splice(index,1);
+                };
+            });
+        </script>
+    </body>
+</html>
+

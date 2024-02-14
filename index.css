@@ -1,0 +1,116 @@
+*{
+    background-color: #FBF6EE;
+}
+h1{
+    font-size: 65px;
+    margin: 10px;
+}
+.main1{
+    display: inline-flex;
+    height: 200px;
+}
+.logo-name{
+    display:inline-flex;
+    width:700px;
+    height:100px;
+}
+.name{
+    display: inline-flex;
+    justify-content: flex-start;
+    width:150px;
+    padding: 10px;
+    padding-top: 0px;
+    height:120px;
+    color: #FFB534;
+}
+img{
+    padding: 20px;
+    padding-top: 20px;
+    border-radius: 40%;
+    height: 120px;
+}
+.tracker{
+    padding: 50px;
+    padding-left: 90px;
+    display: inline-flex;
+    width:450px;
+    align-items: center;
+    justify-content: center;
+    color: rgb(234, 62, 62);
+    font-size: 70px;
+    padding-right: 0px;
+}
+h2{
+    font-size: 50px;
+}
+h3{
+    font-size: 40px;
+    color: #65B741;
+    margin: 15px;
+}
+button{
+    background-color: rgb(234, 62, 62);
+    color: #FBF6EE;
+    font-size: 18px;
+    border-radius: 10%;
+    padding: 15px;
+}
+.main2{
+    display: inline-flex;
+    padding: 30px;
+    padding-top: 15px;
+    padding-bottom: 0px;
+    padding-right: 20px;
+}
+input{
+    font-size: 20px;
+    color: #FFB534;
+}
+table{
+    padding: 50px;
+    padding-top: 20px;
+    padding-left: 170px;
+    font-size: 25px;
+    color:#FFB534;
+    width:550px;
+}
+.removeBtn{
+    font-size: 13px;
+    padding: 5px;
+    background-color: #65B741;
+}
+#tableHead{
+    color: rgb(234, 62, 62);
+    padding-left: 180px;
+    margin: 15px;
+    font-size: 40px;
+}
+#quote{
+    color: #65B741;
+    font-size: 40px;
+    padding: 10px;
+    padding-top: 20px;
+    padding-left: 20px;
+}
+#limit{
+    color: rgb(234, 62, 62);
+    font-size: 49px;
+    text-align: center;
+    margin-top: 30px;
+    margin-bottom: 20px;
+    padding-left: 20px;
+}
+.warning{
+    margin:0px;
+    width: 1200px;
+    text-align: center;
+}
+
+
+
+
+
+
+
+
+
